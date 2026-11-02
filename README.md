@@ -263,24 +263,7 @@ Create a package without running tests:
 
 The `-DskipTests` option skips test execution. A successful package build alone does not establish that the automated tests pass.
 
-## Screenshots and Demo
 
-Screenshots and a short demonstration GIF can make the repository easier to evaluate. Add genuine captures from your running application in a folder such as `docs/images/`, then embed them here.
-
-Suggested captures:
-
-- Dashboard overview
-- Video monitoring panel
-- Person detection window
-- Alert history and risk timeline
-
-Example Markdown once you have added a screenshot:
-
-```markdown
-![Nexa dashboard](docs/images/dashboard.png)
-```
-
-Do not use placeholder screenshots as evidence of implemented functionality.
 
 ## Limitations
 
@@ -312,6 +295,5 @@ Any safety-related capability would require domain-expert review and rigorous va
 
 **Nexa — From Video Detection to Monitoring and Alerts**
 
-<sub>Built as an academic software engineering project.</sub>
 
 </div>
