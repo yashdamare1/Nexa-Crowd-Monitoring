@@ -1,0 +1,1021 @@
+.history-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+    flex-wrap: wrap;
+}
+
+.history-controls label {
+    font-weight: 600;
+}
+
+.history-controls select {
+    min-width: 180px;
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #0f172a;
+}
+
+.chart-container {
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+#peopleCountChart {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.risk-timeline {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.risk-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.risk-timeline-details {
+    min-width: 0;
+}
+
+.risk-timeline-details strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.risk-timeline-details p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+
+/* Live Monitoring History */
+
+.history-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 18px 0;
+    flex-wrap: wrap;
+}
+
+.history-controls label {
+    font-weight: 600;
+    color: #334155;
+}
+
+.history-controls select {
+    min-width: 200px;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0f172a;
+    font: inherit;
+    outline: none;
+}
+
+.history-controls select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+#peopleCountChart {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+
+.risk-timeline {
+    display: grid;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.risk-timeline-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.risk-timeline-item:hover {
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.07);
+    transform: translateY(-1px);
+}
+
+.risk-timeline-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.risk-timeline-details strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #0f172a;
+}
+
+.risk-timeline-details p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .history-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .history-controls select {
+        width: 100%;
+    }
+
+    .chart-container {
+        padding: 6px;
+    }
+
+    .risk-timeline-item {
+        padding: 12px;
+    }
+}
+
+
+/* Main Nexa Dashboard Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body.dashboard {
+    margin: 0;
+    min-height: 100vh;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.dashboard .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 28px 5%;
+    background: #0f172a;
+    color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.dashboard .topbar h1 {
+    margin: 6px 0;
+    font-size: 1.8rem;
+}
+
+.dashboard .topbar p {
+    margin: 6px 0;
+}
+
+.dashboard .eyebrow {
+    color: #93c5fd;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.dashboard .actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.dashboard button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.dashboard button:hover {
+    background: #1d4ed8;
+}
+
+.dashboard .actions .secondary-button {
+    background: #334155;
+}
+
+.dashboard main {
+    width: 90%;
+    max-width: 1440px;
+    margin: 28px auto;
+}
+
+.dashboard .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.dashboard .stat-card {
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard .stat-label {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.dashboard .stat-value {
+    margin-top: 12px;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.dashboard .panel {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.dashboard .panel h2 {
+    margin: 0 0 16px;
+    color: #0f172a;
+    font-size: 1.2rem;
+}
+
+.dashboard .message {
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.dashboard .table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.dashboard th,
+.dashboard td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.dashboard th {
+    background: #f8fafc;
+    color: #475569;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.dashboard tbody tr:hover {
+    background: #f8fafc;
+}
+
+.dashboard .last-updated {
+    margin-bottom: 0;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.dashboard .status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.dashboard .status-warning {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.dashboard .status-online {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.dashboard .status-offline {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Responsive dashboard */
+
+@media (max-width: 900px) {
+    .dashboard .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard main {
+        width: 94%;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard .topbar {
+        padding: 22px 5%;
+    }
+
+    .dashboard .topbar h1 {
+        font-size: 1.45rem;
+    }
+
+    .dashboard .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .dashboard .stat-card {
+        padding: 14px;
+    }
+
+    .dashboard .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .dashboard .panel {
+        padding: 16px;
+    }
+
+    .dashboard th,
+    .dashboard td {
+        padding: 10px;
+    }
+}
+
+
+
+/* Nexa Security Operations Theme */
+
+body.dashboard {
+    background: #0b1120;
+    color: #e2e8f0;
+}
+
+.dashboard .topbar {
+    background: #111827;
+    border-bottom: 1px solid #263449;
+}
+
+.dashboard .eyebrow {
+    color: #22d3ee;
+}
+
+.dashboard main {
+    max-width: 1600px;
+}
+
+.dashboard .stats-grid {
+    gap: 20px;
+}
+
+.dashboard .stat-card {
+    position: relative;
+    overflow: hidden;
+    background: #151f30;
+    border: 1px solid #263449;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.dashboard .stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: #22d3ee;
+}
+
+.dashboard .stat-card:nth-child(2)::before {
+    background: #22c55e;
+}
+
+.dashboard .stat-card:nth-child(3)::before {
+    background: #3b82f6;
+}
+
+.dashboard .stat-card:nth-child(4)::before {
+    background: #ef4444;
+}
+
+.dashboard .stat-label {
+    color: #94a3b8;
+}
+
+.dashboard .stat-value {
+    color: #f8fafc;
+}
+
+.dashboard .panel {
+    background: #111827;
+    border: 1px solid #263449;
+    border-radius: 12px;
+    box-shadow: none;
+}
+
+.dashboard .panel h2 {
+    color: #f1f5f9;
+}
+
+.dashboard .message,
+.dashboard .last-updated {
+    color: #94a3b8;
+}
+
+.dashboard th {
+    background: #1e293b;
+    color: #cbd5e1;
+    border-color: #334155;
+}
+
+.dashboard td {
+    color: #e2e8f0;
+    border-color: #263449;
+}
+
+.dashboard tbody tr:hover {
+    background: #1e293b;
+}
+
+.dashboard .actions .secondary-button {
+    background: #1e293b;
+    border: 1px solid #475569;
+}
+
+.dashboard .actions .secondary-button:hover {
+    background: #334155;
+}
+
+/* People count chart */
+
+.dashboard .chart-container {
+    background: #0b1120;
+    border: 1px solid #263449;
+    border-radius: 12px;
+}
+
+.dashboard .history-controls label {
+    color: #cbd5e1;
+}
+
+.dashboard .history-controls select {
+    background: #1e293b;
+    color: #f1f5f9;
+    border-color: #475569;
+}
+
+/* Risk timeline */
+
+.dashboard .risk-timeline-item {
+    background: #151f30;
+    border: 1px solid #334155;
+    border-left: 4px solid #64748b;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.dashboard .risk-timeline-item:hover {
+    background: #1a273a;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px);
+}
+
+.dashboard .risk-timeline-details strong {
+    color: #f8fafc;
+}
+
+.dashboard .risk-timeline-details p {
+    color: #94a3b8;
+}
+
+/* Risk badge colors */
+
+.dashboard .status-online {
+    background: #14532d;
+    color: #86efac;
+}
+
+.dashboard .status-offline {
+    background: #374151;
+    color: #d1d5db;
+}
+
+.dashboard .status-warning {
+    background: #78350f;
+    color: #fde68a;
+}
+
+.dashboard .risk-timeline-item:has(.status-warning) {
+    border-left-color: #f59e0b;
+}
+
+.dashboard .risk-timeline-item:has(.status-critical) {
+    border-left-color: #ef4444;
+}
+
+.dashboard .risk-timeline-item:has(.status-normal) {
+    border-left-color: #22c55e;
+}
+
+/* Responsive improvements */
+
+@media (max-width: 600px) {
+    .dashboard .topbar {
+        gap: 16px;
+    }
+
+    .dashboard .actions {
+        width: 100%;
+    }
+
+    .dashboard .actions button {
+        flex: 1;
+    }
+}
+
+
+/* Risk Timeline - Operational Status Colors */
+
+.dashboard .risk-timeline-item.risk-normal {
+    border-left: 5px solid #22c55e;
+    background: linear-gradient(90deg, #10251f, #151f30 35%);
+}
+
+.dashboard .risk-timeline-item.risk-warning {
+    border-left: 5px solid #f59e0b;
+    background: linear-gradient(90deg, #302515, #151f30 35%);
+}
+
+.dashboard .risk-timeline-item.risk-critical {
+    border-left: 5px solid #ef4444;
+    background: linear-gradient(90deg, #32191f, #151f30 35%);
+}
+
+.dashboard .risk-timeline-item.risk-unknown {
+    border-left: 5px solid #64748b;
+}
+
+.dashboard .risk-timeline-item.risk-normal .risk-timeline-details strong {
+    color: #86efac;
+}
+
+.dashboard .risk-timeline-item.risk-warning .risk-timeline-details strong {
+    color: #fcd34d;
+}
+
+.dashboard .risk-timeline-item.risk-critical .risk-timeline-details strong {
+    color: #fca5a5;
+}
+
+
+
+/* Risk Summary Cards */
+
+.dashboard .risk-summary-normal::before {
+    background: #22c55e;
+}
+
+.dashboard .risk-summary-normal .stat-value {
+    color: #4ade80;
+}
+
+.dashboard .risk-summary-warning::before {
+    background: #f59e0b;
+}
+
+.dashboard .risk-summary-warning .stat-value {
+    color: #fbbf24;
+}
+
+.dashboard .risk-summary-critical::before {
+    background: #ef4444;
+}
+
+.dashboard .risk-summary-critical .stat-value {
+    color: #f87171;
+}
+
+
+
+/* Responsive Risk Summary Layout */
+
+.dashboard .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .dashboard .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Live Monitoring Source Indicators */
+
+.dashboard .source-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 11px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.dashboard .source-online {
+    color: #86efac;
+    background: #123326;
+    border-color: #166534;
+}
+
+.dashboard .source-offline {
+    color: #cbd5e1;
+    background: #273244;
+    border-color: #475569;
+}
+
+.dashboard .source-status-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.dashboard .source-online .source-status-dot {
+    background: #22c55e;
+    box-shadow: 0 0 9px rgba(34, 197, 94, 0.55);
+    animation: source-pulse 1.8s ease-in-out infinite;
+}
+
+.dashboard .source-offline .source-status-dot {
+    background: #94a3b8;
+}
+
+@keyframes source-pulse {
+    0%, 100% {
+        box-shadow: 0 0 3px rgba(34, 197, 94, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dashboard .source-online .source-status-dot {
+        animation: none;
+    }
+}
+
+
+
+/* Nexa Secure Login Page */
+
+body.login-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(ellipse at top, #1e3a5f 0%, transparent 55%),
+        #0b1120;
+    color: #e2e8f0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.login-page .login-card {
+    width: 100%;
+    max-width: 430px;
+    padding: 38px;
+    background: #111827;
+    border: 1px solid #263449;
+    border-radius: 18px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.login-page .brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    border-radius: 14px;
+    background: #0891b2;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.login-page .eyebrow {
+    color: #22d3ee;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.login-page h1 {
+    margin: 12px 0;
+    color: #f8fafc;
+    font-size: 2rem;
+}
+
+.login-page .muted,
+.login-page .footer-note {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.login-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.login-page label {
+    margin-top: 8px;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.login-page input {
+    width: 100%;
+    padding: 13px 14px;
+    box-sizing: border-box;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    outline: none;
+    background: #0b1120;
+    color: #f8fafc;
+    font: inherit;
+}
+
+.login-page input::placeholder {
+    color: #64748b;
+}
+
+.login-page input:focus {
+    border-color: #22d3ee;
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.12);
+}
+
+.login-page button {
+    margin-top: 16px;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #0891b2;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.login-page button:hover {
+    background: #0e7490;
+}
+
+.login-page .error-message {
+    min-height: 20px;
+    margin: 4px 0;
+    color: #fca5a5;
+    font-size: 0.9rem;
+}
+
+.login-page .footer-note {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+    body.login-page {
+        padding: 16px;
+    }
+
+    .login-page .login-card {
+        padding: 26px;
+    }
+}
+
+
+/* Security Alert Table */
+
+.dashboard .alert-row td:first-child {
+    font-weight: 700;
+}
+
+.dashboard .alert-row.alert-critical {
+    background: rgba(127, 29, 29, 0.18);
+}
+
+.dashboard .alert-row.alert-critical td:first-child {
+    border-left: 4px solid #ef4444;
+}
+
+.dashboard .alert-row.alert-critical:hover {
+    background: rgba(127, 29, 29, 0.32);
+}
+
+.dashboard .alert-row.alert-warning {
+    background: rgba(120, 53, 15, 0.15);
+}
+
+.dashboard .alert-row.alert-warning td:first-child {
+    border-left: 4px solid #f59e0b;
+}
+
+.dashboard .alert-row.alert-resolved {
+    background: rgba(20, 83, 45, 0.12);
+}
+
+.dashboard .alert-row.alert-resolved td:first-child {
+    border-left: 4px solid #22c55e;
+}
+
+.dashboard .alert-row.alert-normal td:first-child {
+    border-left: 4px solid #64748b;
+}
+
+
+
+/* Video Monitoring Controls */
+.video-control-panel {
+    margin-bottom: 24px;
+}
+
+.video-control-panel .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.video-control-panel .panel-header h2 {
+    margin: 0 0 6px;
+}
+
+.video-control-panel .panel-header p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+.video-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.video-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.video-field label {
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.video-field select,
+.video-field input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    color: #e2e8f0;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    outline: none;
+}
+
+.video-field select:focus,
+.video-field input:focus {
+    border-color: #22d3ee;
+}
+
+.video-actions {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 10px;
+    grid-column: 1 / -1;
+}
+
+.video-actions button {
+    padding: 11px 16px;
+    color: #e2e8f0;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.video-actions button:first-child {
+    color: #082f49;
+    background: #22d3ee;
+    border-color: #22d3ee;
+}
+
+.video-actions button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.pipeline-status {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.pipeline-status.running {
+    color: #86efac;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.pipeline-status.stopped {
+    color: #cbd5e1;
+    background: rgba(148, 163, 184, 0.1);
+    border: 1px solid #475569;
+}
+
+#pipelineMessage {
+    margin: 18px 0 0;
+    color: #94a3b8;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa | Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/dashboard.js" defer></script>
+</head>
+<body class="dashboard">
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">NEXA / OPERATIONS</p>
+            <h1>Monitoring dashboard</h1>
+            <p id="welcomeMessage">Loading your account...</p>
+        </div>
+        <div class="actions">
+            <span id="connectionStatus" class="status status-warning">CONNECTING</span>
+            <button id="refreshButton" class="secondary-button" type="button">Refresh</button>
+            <button id="logoutButton" type="button">Sign out</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="panel video-control-panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Video Monitoring</h2>
+                    <p>Select a video and control the AI detection pipeline.</p>
+                </div>
+                <span id="pipelineStatus" class="pipeline-status stopped">
+                    STOPPED
+                </span>
+            </div>
+
+            <div class="video-controls">
+                <div class="video-field">
+                    <label for="videoSelector">Available video</label>
+                    <select id="videoSelector">
+                        <option value="">Loading videos...</option>
+                    </select>
+                </div>
+
+                <div class="video-field">
+                    <label for="pipelineEmail">Nexa account email</label>
+                    <input
+                        type="email"
+                        id="pipelineEmail"
+                        placeholder="Enter your Nexa email"
+                        autocomplete="username"
+                    >
+                </div>
+
+                <div class="video-field">
+                    <label for="pipelinePassword">Nexa account password</label>
+                    <input
+                        type="password"
+                        id="pipelinePassword"
+                        placeholder="Enter your Nexa password"
+                        autocomplete="current-password"
+                    >
+                </div>
+
+                <div class="video-actions">
+                    <button type="button" id="startPipelineButton">
+                        Start Monitoring
+                    </button>
+                    <button type="button" id="stopPipelineButton" disabled>
+                        Stop Monitoring
+                    </button>
+                    <button type="button" id="refreshVideosButton">
+                        Refresh Videos
+                    </button>
+                </div>
+            </div>
+
+            <p id="pipelineMessage" role="status" aria-live="polite">
+                Choose a video to begin.
+            </p>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <div class="stat-label">Total sources</div>
+                <div id="totalSources" class="stat-value">—</div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-label">Sources online</div>
+                <div id="onlineSources" class="stat-value">—</div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-label">People detected</div>
+                <div id="totalPeople" class="stat-value">—</div>
+            </article>
+            <article class="stat-card">
+                <div class="stat-label">Critical sources</div>
+                <div id="criticalSources" class="stat-value">—</div>
+            </article>
+            
+            <article class="stat-card risk-summary-normal">
+                <div class="stat-label">Normal sources</div>
+                <div id="normalSources" class="stat-value">0</div>
+            </article>
+
+            <article class="stat-card risk-summary-warning">
+                <div class="stat-label">Warning sources</div>
+                <div id="warningSources" class="stat-value">0</div>
+            </article>
+
+            <article class="stat-card risk-summary-critical">
+                <div class="stat-label">Critical sources</div>
+                <div id="riskCriticalSources" class="stat-value">0</div>
+            </article>
+
+        </section>
+
+        <section class="panel">
+            <h2>Live monitoring sources</h2>
+            <p class="message" id="sourceMessage">Loading monitoring data...</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Source ID</th>
+                            <th>People</th>
+                            <th>Risk level</th>
+                            <th>Source status</th>
+                            <th>Last updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sourceTableBody"></tbody>
+                </table>
+            </div>
+            <p id="lastRefresh" class="last-updated"></p>
+        </section>
+
+        <section class="panel">
+            <h2>People Count History</h2>
+            <p class="message" id="historyMessage">
+                Select a source to view historical counts.
+            </p>
+
+            <div class="history-controls">
+                <label for="historySource">Monitoring source</label>
+                <select id="historySource">
+                    <option value="">Select source</option>
+                </select>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="peopleCountChart"></canvas>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Risk Timeline</h2>
+            <p class="message" id="riskTimelineMessage">
+                Risk history will appear here.
+            </p>
+            <div id="riskTimeline" class="risk-timeline"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Alert history</h2>
+            <p class="message" id="alertMessage">Loading alert history...</p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Alert ID</th>
+                            <th>Source</th>
+                            <th>Event</th>
+                            <th>Risk level</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                            <th>Created</th>
+                            <th>Resolved</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alertTableBody"></tbody>
+                </table>
+            </div>
+            <p id="alertLastRefresh" class="last-updated"></p>
+        </section>
+    </main>
+</body>
+</html>

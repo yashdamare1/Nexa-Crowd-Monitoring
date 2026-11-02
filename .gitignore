@@ -1,0 +1,40 @@
+# Java / Maven
+target/
+*.class
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+ai/.venv/
+venv/
+env/
+
+# Model weights
+*.pt
+*.onnx
+*.weights
+
+# Videos and generated media
+ai/video/*.mp4
+ai/video/*.avi
+ai/video/*.mov
+ai/video/*.mkv
+
+# Logs
+*.log
+launcher/video-pipeline.log
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Operating system
+.DS_Store
+Thumbs.db
