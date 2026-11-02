@@ -304,13 +304,7 @@ Potential extensions include:
 
 Any safety-related capability would require domain-expert review and rigorous validation before operational use.
 
-## Contributors
 
-Add the project contributors and their responsibilities here.
-
-## Academic Disclaimer
-
-Nexa is developed as an academic prototype to demonstrate the integration of computer vision, backend services, database persistence, authentication, and a web dashboard. It is not a certified crowd-control, surveillance, or emergency-management product.
 
 ---
 
